@@ -156,7 +156,7 @@
          const nomeDia = getDiaSemanaTexto(diaSemana);
          const nomeMes = getNomeMes(numeroMes)
         
-         
+         console.log('testoooan')
           return(
               `${nomeDia},  ${data.getDate()} de ${nomeMes}` +
                `  de ${data.getFullYear()} ,
