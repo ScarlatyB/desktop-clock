@@ -131,7 +131,8 @@
        //outro jeito de fazer o relógio com arrays e meu preferido <3
 
        const h1 = document.querySelector('.container h1');
-       const data = new Date();
+       
+      
 
        function getDiaSemanaTexto(diaSemana){
            const diasSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado']
@@ -154,14 +155,26 @@
 
          const nomeDia = getDiaSemanaTexto(diaSemana);
          const nomeMes = getNomeMes(numeroMes)
-
+        
+         console.log('testoooandosafaduuuuuuu')
           return(
               `${nomeDia},  ${data.getDate()} de ${nomeMes}` +
                `  de ${data.getFullYear()} ,
                  ${zeroAEsquerda(data.getHours())}:${zeroAEsquerda(data.getMinutes())}`
            );
-
+          
         }
-        h1.innerHTML= criaData(data);
+        function alterarHora(){
+         const data = new Date();
+         h1.innerHTML= criaData(data)
+        }
+        
+         setInterval(alterarHora, 1000)
+       
+       
+       
+        // h1.innerHTML= criaData(data)
+        
+        // console.log('testando')
         
 
